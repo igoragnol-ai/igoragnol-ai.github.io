@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Informações basicas da pagina -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre | Igor Siqueira Dall Agnol</title>
-    <link rel="stylesheet" href="css/cssindex.css">
+    <link rel="stylesheet" href="css/cssindex.css"> <!-- link pro css externo -->
 </head>
 <body class="tema-claro">
+    <!-- Menu de navegacao -->
     <div class="topo">
         <div class="container">
             <div class="logo">
                 <a href="index.html">Igor Siqueira</a>
             </div>
+            <!-- Botao para trocar tema claro/escuro -->
             <button class="btn-tema" id="botaoTema">
                 <img src="imagens/icons8-moon-96.png" alt="Tema escuro" id="iconeTema">
             </button>
+            <!-- Botao do menu hamburguer pra celular -->
             <button class="btn-menu" id="botaoMenu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <!-- Links do menu -->
             <ul class="menu" id="menuNav">
                 <li><a href="index.html" class="ativo">Sobre</a></li>
                 <li><a href="formacao.html">Formação</a></li>
@@ -30,8 +35,10 @@
     </div>
 
     <main>
+        <!-- Seção principal sobre mim -->
         <section class="sobre">
             <div class="container">
+                <!-- Cabecalho com foto e nome -->
                 <div class="cabecalho">
                     <div class="foto">
                         <img src="imagens/imagem.png" alt="Igor Siqueira Dall Agnol" id="fotoPerfil">
@@ -43,7 +50,9 @@
                     </div>
                 </div>
 
+                <!-- Cards com as informacoes -->
                 <div class="grid">
+                    <!-- Card de apresentacao -->
                     <div class="card">
                         <h2>Apresentação</h2>
                         <p>
@@ -58,6 +67,7 @@
                         </p>
                     </div>
 
+                    <!-- Card com dados pessoais -->
                     <div class="card">
                         <h2>Informações Pessoais</h2>
                         <ul class="lista-dados">
@@ -83,6 +93,7 @@
                         </div>
                     </div>
 
+                    <!-- Card de hobbies -->
                     <div class="card">
                         <h2>Hobbies e Interesses</h2>
                         <div class="hobbies">
@@ -105,6 +116,7 @@
                         </p>
                     </div>
 
+                    <!-- Card de experiencias internacionais -->
                     <div class="card">
                         <h2>Experiências Internacionais</h2>
                         <ul class="lista-exp">
@@ -120,6 +132,7 @@
                         </ul>
                     </div>
 
+                    <!-- Card com areas de atuacao -->
                     <div class="card">
                         <h2>Áreas de Atuação</h2>
                         <div class="tags">
@@ -146,6 +159,7 @@
         </section>
     </main>
 
+    <!-- Rodape da pagina -->
     <div class="rodape">
         <div class="container">
             <p>&copy; 2026 Igor Siqueira Dall Agnol - Medianeira, Paraná</p>
@@ -154,15 +168,18 @@
     </div>
 
     <script>
+        // Pega os elementos do HTML
         let botao = document.getElementById('botaoMenu');
         let menu = document.getElementById('menuNav');
 
+        // Abre/fecha o menu no celular quando clica no botão
         if (botao) {
             botao.addEventListener('click', function() {
                 menu.classList.toggle('mostrar');
             });
         }
 
+        // Fecha o menu quando clica em algum link
         let links = document.querySelectorAll('.menu a');
         for (let i = 0; i < links.length; i++) {
             links[i].addEventListener('click', function() {
@@ -170,10 +187,12 @@
             });
         }
 
+        // Lógica para trocar o tema (claro/escuro)
         let botaoTema = document.getElementById('botaoTema');
         let iconeTema = document.getElementById('iconeTema');
         let corpo = document.body;
 
+        // Verifica se já tem um tema salvo no navegador
         let temaSalvo = localStorage.getItem('tema');
         if (temaSalvo) {
             corpo.className = temaSalvo;
@@ -190,6 +209,7 @@
             iconeTema.alt = 'Tema escuro';
         }
 
+        // Quando clica no botão, troca o tema e salva no navegador
         if (botaoTema) {
             botaoTema.addEventListener('click', function() {
                 if (corpo.className === 'tema-claro') {
