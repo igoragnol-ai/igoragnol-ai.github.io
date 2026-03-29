@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsivo -->
     <title>Formação | Igor Siqueira Dall Agnol</title>
-    <link rel="stylesheet" href="css/cssfrmacao.css">
+    <link rel="stylesheet" href="css/cssfrmacao.css"> <!-- css externo -->
 </head>
-<body class="tema-claro">
+
+<body class="tema-claro"> <!-- tema padrão -->
+    
+    <!-- barra de navegação -->
     <div class="topo">
         <div class="container">
+            
+            <!-- logo -->
             <div class="logo">
                 <a href="index.html">Igor Siqueira</a>
             </div>
+
+            <!-- botão de tema claro/escuro -->
             <button class="btn-tema" id="botaoTema">
                 <img src="imagens/icons8-moon-96.png" alt="Tema escuro" id="iconeTema">
             </button>
+
+            <!-- menu hamburguer -->
             <button class="btn-menu" id="botaoMenu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
+            <!-- links de navegação -->
             <ul class="menu" id="menuNav">
                 <li><a href="index.html">Sobre</a></li>
-                <li><a href="formacao.html" class="ativo">Formação</a></li>
+                <li><a href="formacao.html" class="ativo">Formação</a></li> <!-- página atual -->
                 <li><a href="portifolio.html">Portifólio</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </div>
     </div>
 
+    <!-- conteúdo principal -->
     <main>
         <section class="formacao">
             <div class="container">
+                
+                <!-- cabeçalho da página -->
                 <div class="cabecalho">
                     <div class="foto">
                         <img src="imagens/mala.png" alt="Livro">
@@ -42,7 +56,10 @@
                     </div>
                 </div>
 
+                <!-- grid de cards com informações -->
                 <div class="grid">
+                    
+                    <!-- card educação -->
                     <div class="card">
                         <h2>Educação</h2>
                         <h3>Ciências da Computação</h3>
@@ -58,6 +75,7 @@
                         <span class="instituicao">Bayswater Global Education Experiences</span>
                     </div>
 
+                    <!-- card idiomas -->
                     <div class="card">
                         <h2>Idiomas</h2>
                         <h3>Inglês</h3>
@@ -68,6 +86,7 @@
                         <p>Nativo</p>
                     </div>
 
+                    <!-- card competências / habilidades -->
                     <div class="card">
                         <h2>Competências</h2>
                         <div class="competencias">
@@ -84,6 +103,7 @@
                         </div>
                     </div>
 
+                    <!-- card competições e eventos internacionais -->
                     <div class="card">
                         <h2>Competições e Eventos</h2>
                         <ul class="lista">
@@ -93,6 +113,7 @@
                         </ul>
                     </div>
 
+                    <!-- card cursos diversos -->
                     <div class="card">
                         <h2>Cursos</h2>
                         <div class="curso-item">
@@ -109,6 +130,7 @@
                         </div>
                     </div>
 
+                    <!-- card cursos ANBIMA (certificações financeiras) -->
                     <div class="card">
                         <h2>Cursos Anbima</h2>
                         <div class="curso-item">
@@ -134,6 +156,7 @@
                         </div>
                     </div>
 
+                    <!-- card cursos B3 (bolsa de valores) -->
                     <div class="card">
                         <h2>Cursos B3</h2>
                         <div class="curso-item">
@@ -147,6 +170,7 @@
                         </div>
                     </div>
 
+                    <!-- card experiência profissional detalhada -->
                     <div class="card">
                         <h2>Experiência Profissional</h2>
                         <ul class="lista">
@@ -159,11 +183,13 @@
                             <li>Experiência em cozinhas de festas e eventos</li>
                         </ul>
                     </div>
-                </div>
+
+                </div> <!-- fim do grid -->
             </div>
         </section>
     </main>
 
+    <!-- rodapé -->
     <div class="rodape">
         <div class="container">
             <p>&copy; 2026 Igor Siqueira Dall Agnol - Medianeira, Paraná</p>
@@ -171,7 +197,9 @@
         </div>
     </div>
 
+    <!-- JavaScript -->
     <script>
+        // menu hamburguer - abre/fecha
         let botao = document.getElementById('botaoMenu');
         let menu = document.getElementById('menuNav');
 
@@ -181,6 +209,7 @@
             });
         }
 
+        // fecha menu ao clicar em link
         let links = document.querySelectorAll('.menu a');
         for (let i = 0; i < links.length; i++) {
             links[i].addEventListener('click', function() {
@@ -188,10 +217,12 @@
             });
         }
 
+        // tema claro/escuro
         let botaoTema = document.getElementById('botaoTema');
         let iconeTema = document.getElementById('iconeTema');
         let corpo = document.body;
 
+        // verifica tema salvo
         let temaSalvo = localStorage.getItem('tema');
         if (temaSalvo) {
             corpo.className = temaSalvo;
@@ -208,6 +239,7 @@
             iconeTema.alt = 'Tema escuro';
         }
 
+        // alterna tema ao clicar
         if (botaoTema) {
             botaoTema.addEventListener('click', function() {
                 if (corpo.className === 'tema-claro') {
