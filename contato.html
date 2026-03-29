@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- suporte a caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsivo -->
     <title>Contato | Igor Siqueira Dall Agnol</title>
-    <link rel="stylesheet" href="css/csscontato.css">
+    <link rel="stylesheet" href="css/csscontato.css"> <!-- css externo -->
 </head>
-<body class="tema-claro">
+
+<body class="tema-claro"> <!-- tema padrão -->
+    
+    <!-- barra de navegação -->
     <div class="topo">
         <div class="container">
+            
+            <!-- logo -->
             <div class="logo">
                 <a href="index.html">Igor Siqueira</a>
             </div>
+
+            <!-- botão de tema claro/escuro -->
             <button class="btn-tema" id="botaoTema">
                 <img src="imagens/icons8-moon-96.png" alt="Tema escuro" id="iconeTema">
             </button>
+
+            <!-- menu hamburguer (mobile) -->
             <button class="btn-menu" id="botaoMenu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
+            <!-- links de navegação -->
             <ul class="menu" id="menuNav">
                 <li><a href="index.html">Sobre</a></li>
                 <li><a href="formacao.html">Formação</a></li>
                 <li><a href="portifolio.html">Portifolio</a></li>
-                <li><a href="contato.html" class="ativo">Contato</a></li>
+                <li><a href="contato.html" class="ativo">Contato</a></li> <!-- página atual -->
             </ul>
         </div>
     </div>
 
+    <!-- conteúdo principal -->
     <main>
         <section class="contato">
             <div class="container">
+                
+                <!-- cabeçalho -->
                 <div class="cabecalho">
                     <div class="foto">
                         <img src="imagens/email.png" alt="Envelope">
@@ -43,8 +57,11 @@
                 </div>
 
                 <div class="grid">
+                    
+                    <!-- card com informações de contato -->
                     <div class="info-card">
                         <h2>Informações</h2>
+                        
                         <div class="info-item">
                             <div class="info-icon">
                                 <img src="imagens/localizacao.png" alt="Localização">
@@ -54,6 +71,7 @@
                                 <p>Medianeira, Paraná - Brasil</p>
                             </div>
                         </div>
+
                         <div class="info-item">
                             <div class="info-icon">
                                 <img src="imagens/email.png" alt="E-mail">
@@ -63,6 +81,7 @@
                                 <p>igor.siqueira@email.com</p>
                             </div>
                         </div>
+
                         <div class="info-item">
                             <div class="info-icon">
                                 <img src="imagens/celular.png" alt="Telefone">
@@ -72,6 +91,7 @@
                                 <p>(45) 99999-9999</p>
                             </div>
                         </div>
+
                         <div class="info-item">
                             <div class="info-icon">
                                 <img src="imagens/menssagem.png" alt="WhatsApp">
@@ -81,6 +101,7 @@
                                 <p>(45) 99999-9999</p>
                             </div>
                         </div>
+
                         <div class="info-item">
                             <div class="info-icon">
                                 <img src="imagens/mala.png" alt="LinkedIn">
@@ -92,27 +113,33 @@
                         </div>
                     </div>
 
+                    <!-- card com formulário de contato -->
                     <div class="form-card">
                         <h2>Envie uma mensagem</h2>
                         <form id="formContato">
+                            
+                            <!-- campo nome -->
                             <div class="grupo">
                                 <label for="nome">Nome completo *</label>
                                 <input type="text" id="nome" name="nome">
                                 <div class="erro" id="erroNome">Por favor, preencha seu nome</div>
                             </div>
 
+                            <!-- campo email -->
                             <div class="grupo">
                                 <label for="email">E-mail *</label>
                                 <input type="email" id="email" name="email">
                                 <div class="erro" id="erroEmail">Por favor, preencha um e-mail válido (ex: usuario@dominio.com)</div>
                             </div>
 
+                            <!-- campo whatsapp com formatação automática -->
                             <div class="grupo">
                                 <label for="whatsapp">WhatsApp (opcional)</label>
                                 <input type="tel" id="whatsapp" name="whatsapp" placeholder="(45) 99999-9999">
                                 <div class="erro" id="erroWhatsapp">WhatsApp inválido! Use o formato: (45) 99999-9999</div>
                             </div>
 
+                            <!-- campo mensagem -->
                             <div class="grupo">
                                 <label for="mensagem">Mensagem *</label>
                                 <textarea id="mensagem" name="mensagem" rows="5"></textarea>
@@ -122,11 +149,13 @@
                             <button type="submit" class="btn-enviar">Enviar mensagem</button>
                         </form>
                     </div>
-                </div>
+
+                </div> <!-- fim do grid -->
             </div>
         </section>
     </main>
 
+    <!-- modal de feedback (sucesso/erro) -->
     <div class="modal" id="modal">
         <div class="modal-conteudo">
             <img src="imagens/certo.png" alt="Sucesso" class="modal-icon" id="modalIcone">
@@ -135,6 +164,7 @@
         </div>
     </div>
 
+    <!-- rodapé -->
     <div class="rodape">
         <div class="container">
             <p>&copy; 2026 Igor Siqueira Dall Agnol - Medianeira, Paraná</p>
@@ -142,7 +172,9 @@
         </div>
     </div>
 
+    <!-- JavaScript -->
     <script>
+        // menu hamburguer
         let botao = document.getElementById('botaoMenu');
         let menu = document.getElementById('menuNav');
 
@@ -152,6 +184,7 @@
             });
         }
 
+        // fecha menu ao clicar em link
         let links = document.querySelectorAll('.menu a');
         for (let i = 0; i < links.length; i++) {
             links[i].addEventListener('click', function() {
@@ -159,6 +192,7 @@
             });
         }
 
+        // tema claro/escuro
         let botaoTema = document.getElementById('botaoTema');
         let iconeTema = document.getElementById('iconeTema');
         let corpo = document.body;
@@ -195,6 +229,7 @@
             });
         }
 
+        // ---- validação do formulário ----
         let form = document.getElementById('formContato');
         let nome = document.getElementById('nome');
         let email = document.getElementById('email');
@@ -211,11 +246,13 @@
         let modalIcone = document.getElementById('modalIcone');
         let fecharModal = document.getElementById('fecharModal');
 
+        // valida formato de email
         function validarEmail(email) {
             let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return regex.test(email);
         }
 
+        // valida formato do whatsapp (aceita vazio)
         function validarWhatsapp(whatsapp) {
             if (whatsapp.trim() === '') {
                 return true;
@@ -224,6 +261,7 @@
             return regex.test(whatsapp);
         }
 
+        // formata whatsapp automaticamente enquanto digita
         function formatarWhatsapp(valor) {
             let numeros = valor.replace(/\D/g, '');
             if (numeros.length <= 11) {
@@ -244,6 +282,7 @@
             return valor;
         }
 
+        // evento de formatação do whatsapp
         whatsapp.addEventListener('input', function() {
             let valor = this.value;
             let numeros = valor.replace(/\D/g, '');
@@ -255,6 +294,7 @@
             }
         });
 
+        // exibe modal de feedback
         function mostrarModal(tipo, texto) {
             if (tipo === 'sucesso') {
                 modalIcone.src = 'imagens/certo.png';
@@ -268,21 +308,25 @@
             modal.style.display = 'flex';
         }
 
+        // fecha modal
         fecharModal.onclick = function() {
             modal.style.display = 'none';
         }
 
+        // fecha modal clicando fora
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = 'none';
             }
         }
 
+        // envio do formulário com validação
         form.addEventListener('submit', function(event) {
-            event.preventDefault();
+            event.preventDefault(); // evita recarregar a página
             
             let valido = true;
             
+            // valida nome
             if (nome.value.trim() === '') {
                 erroNome.style.display = 'block';
                 valido = false;
@@ -290,6 +334,7 @@
                 erroNome.style.display = 'none';
             }
             
+            // valida email
             if (email.value.trim() === '') {
                 erroEmail.style.display = 'block';
                 erroEmail.innerHTML = 'Por favor, preencha seu e-mail';
@@ -302,6 +347,7 @@
                 erroEmail.style.display = 'none';
             }
             
+            // valida whatsapp
             if (!validarWhatsapp(whatsapp.value)) {
                 erroWhatsapp.style.display = 'block';
                 valido = false;
@@ -309,6 +355,7 @@
                 erroWhatsapp.style.display = 'none';
             }
             
+            // valida mensagem
             if (mensagem.value.trim() === '') {
                 erroMensagem.style.display = 'block';
                 valido = false;
@@ -316,6 +363,7 @@
                 erroMensagem.style.display = 'none';
             }
             
+            // se tudo estiver válido
             if (valido) {
                 let mensagemSucesso = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
                 if (whatsapp.value.trim() !== '') {
@@ -323,6 +371,7 @@
                 }
                 mostrarModal('sucesso', mensagemSucesso);
                 
+                // limpa formulário
                 nome.value = '';
                 email.value = '';
                 whatsapp.value = '';
@@ -332,6 +381,7 @@
             }
         });
 
+        // remove mensagens de erro enquanto digita
         nome.addEventListener('input', function() {
             if (nome.value.trim() !== '') {
                 erroNome.style.display = 'none';
