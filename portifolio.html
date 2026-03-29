@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- suporte a caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsivo -->
     <title>Portfólio | Igor Siqueira Dall Agnol</title>
-    <link rel="stylesheet" href="css/cssportifolio.css">
+    <link rel="stylesheet" href="css/cssportifolio.css"> <!-- link pro css -->
 </head>
-<body class="tema-claro">
+
+<body class="tema-claro"> <!-- tema padrão -->
+    
+    <!-- barra de navegação -->
     <div class="topo">
         <div class="container">
+            
+            <!-- logo / nome -->
             <div class="logo">
                 <a href="index.html">Igor Siqueira</a>
             </div>
+
+            <!-- botão de trocar tema claro/escuro -->
             <button class="btn-tema" id="botaoTema">
                 <img src="imagens/icons8-moon-96.png" alt="Tema escuro" id="iconeTema">
             </button>
+
+            <!-- menu hamburguer pra mobile -->
             <button class="btn-menu" id="botaoMenu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
+            <!-- links de navegação -->
             <ul class="menu" id="menuNav">
                 <li><a href="index.html">Sobre</a></li>
                 <li><a href="formacao.html">Formação</a></li>
-                <li><a href="portifolio.html" class="ativo">Portifólio</a></li>
+                <li><a href="portifolio.html" class="ativo">Portifólio</a></li> <!-- classe ativo indica página atual -->
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </div>
     </div>
 
+    <!-- conteúdo principal -->
     <main>
         <section class="portfolio">
             <div class="container">
+                
+                <!-- cabeçalho da página -->
                 <div class="cabecalho">
                     <div class="foto">
                         <img src="imagens/pasta.png" alt="Computador">
@@ -43,7 +57,10 @@
                     </div>
                 </div>
 
+                <!-- grid de cards, cada card = um projeto -->
                 <div class="grid">
+                    
+                    <!-- card 1 -->
                     <div class="card">
                         <h2>1 - Sistemas</h2>
                         <p>Projeto desenvolvido com alunos da turma de Sistemas, abordando conceitos básicos de programação e lógica.</p>
@@ -58,6 +75,7 @@
                         </span>
                     </div>
 
+                    <!-- card 2 - link do próprio projeto -->
                     <div class="card">
                         <h2>Link Deste Projeto</h2>
                         <p>Todos os codigos e imagens se encontrão aqui.</p>
@@ -72,6 +90,7 @@
                         </span>
                     </div>
 
+                    <!-- card 3 -->
                     <div class="card">
                         <h2>Curso Pensamento Computacional</h2>
                         <p>Material e atividades do curso de pensamento computacional, ensinando lógica e resolução de problemas.</p>
@@ -86,6 +105,7 @@
                         </span>
                     </div>
 
+                    <!-- card 4 -->
                     <div class="card">
                         <h2>Site 7C</h2>
                         <p>Projeto de criação de site desenvolvido com a turma 7C, explorando HTML e CSS.</p>
@@ -100,6 +120,7 @@
                         </span>
                     </div>
 
+                    <!-- card 5 -->
                     <div class="card">
                         <h2>1 - ADM</h2>
                         <p>Trabalho desenvolvido com a turma de Administração, unindo conceitos de gestão e tecnologia.</p>
@@ -114,6 +135,7 @@
                         </span>
                     </div>
 
+                    <!-- card 6 -->
                     <div class="card">
                         <h2>3 - MAT B</h2>
                         <p>Projeto interdisciplinar com a turma de Matemática, aplicando conceitos matemáticos na programação.</p>
@@ -128,6 +150,7 @@
                         </span>
                     </div>
 
+                    <!-- card 7 -->
                     <div class="card">
                         <h2>7B</h2>
                         <p>Site desenvolvido com a turma 7B, introduzindo conceitos de estrutura web.</p>
@@ -142,6 +165,7 @@
                         </span>
                     </div>
 
+                    <!-- card 8 -->
                     <div class="card">
                         <h2>6D - Python</h2>
                         <p>Material e exercícios do curso de Python para a turma 6D, ensinando programação desde o básico.</p>
@@ -156,6 +180,7 @@
                         </span>
                     </div>
 
+                    <!-- card 9 -->
                     <div class="card">
                         <h2>Python - 7 ano</h2>
                         <p>Material didático e exercícios de Python para alunos do 7º ano, abordando conceitos básicos de programação.</p>
@@ -170,6 +195,7 @@
                         </span>
                     </div>
 
+                    <!-- card 10 -->
                     <div class="card">
                         <h2>Python - 6B</h2>
                         <p>Material de Python para a turma 6B, com exercícios introdutórios e atividades práticas.</p>
@@ -184,6 +210,7 @@
                         </span>
                     </div>
 
+                    <!-- card 11 -->
                     <div class="card">
                         <h2>Python - Geral</h2>
                         <p>Repositório geral com materiais e exemplos de Python utilizados em diversas turmas.</p>
@@ -198,6 +225,7 @@
                         </span>
                     </div>
 
+                    <!-- card 12 -->
                     <div class="card">
                         <h2>HTML</h2>
                         <p>Projetos e exemplos de HTML e CSS desenvolvidos em sala de aula.</p>
@@ -212,6 +240,7 @@
                         </span>
                     </div>
 
+                    <!-- card 13 - p5.js criatividade -->
                     <div class="card">
                         <h2>Projeto P5.js - Criatividade</h2>
                         <p>Projeto de arte generativa desenvolvido com p5.js, explorando cores e formas.</p>
@@ -226,6 +255,7 @@
                         </span>
                     </div>
 
+                    <!-- card 14 - p5.js interatividade -->
                     <div class="card">
                         <h2>Projeto P5.js - Interatividade</h2>
                         <p>Projeto interativo desenvolvido com p5.js, onde o usuário pode interagir com elementos na tela.</p>
@@ -240,6 +270,7 @@
                         </span>
                     </div>
 
+                    <!-- card 15 - p5.js animação -->
                     <div class="card">
                         <h2>Projeto P5.js - Animação</h2>
                         <p>Projeto de animação desenvolvido com p5.js, explorando movimento e transições.</p>
@@ -254,6 +285,7 @@
                         </span>
                     </div>
 
+                    <!-- card 16 - Tinkercad (ferramenta) -->
                     <div class="card card-ferramenta">
                         <h2>Tinkercad</h2>
                         <p>Utilizo a plataforma Tinkercad para montagem de circuitos eletrônicos, simulação de Arduino, modelagem 2D e 3D com meus alunos.</p>
@@ -266,11 +298,13 @@
                         </div>
                         <p style="margin-top: 0.5rem;">Projetos de simulação e prototipagem realizados em sala de aula.</p>
                     </div>
-                </div>
+
+                </div> <!-- fim do grid -->
             </div>
         </section>
     </main>
 
+    <!-- rodapé da página -->
     <div class="rodape">
         <div class="container">
             <p>&copy; 2026 Igor Siqueira Dall Agnol - Medianeira, Paraná</p>
@@ -278,7 +312,9 @@
         </div>
     </div>
 
+    <!-- JavaScript pra interatividade -->
     <script>
+        // menu hamburguer: abre/fecha ao clicar no botão
         let botao = document.getElementById('botaoMenu');
         let menu = document.getElementById('menuNav');
 
@@ -288,6 +324,7 @@
             });
         }
 
+        // fecha o menu quando clica em algum link
         let links = document.querySelectorAll('.menu a');
         for (let i = 0; i < links.length; i++) {
             links[i].addEventListener('click', function() {
@@ -295,10 +332,12 @@
             });
         }
 
+        // controle do tema claro/escuro
         let botaoTema = document.getElementById('botaoTema');
         let iconeTema = document.getElementById('iconeTema');
         let corpo = document.body;
 
+        // verifica se tem tema salvo no localStorage
         let temaSalvo = localStorage.getItem('tema');
         if (temaSalvo) {
             corpo.className = temaSalvo;
@@ -315,6 +354,7 @@
             iconeTema.alt = 'Tema escuro';
         }
 
+        // alterna tema ao clicar no botão
         if (botaoTema) {
             botaoTema.addEventListener('click', function() {
                 if (corpo.className === 'tema-claro') {
